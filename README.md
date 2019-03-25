@@ -3,5 +3,5 @@
 Run the install script:
 
 ```
-curl -sSL https://github.com/sundowndev/dotfiles/blob/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/sundowndev/dotfiles/master/install.sh | bash
 ```
