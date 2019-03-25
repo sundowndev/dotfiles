@@ -2,7 +2,9 @@
 
 BASE=$HOME/.dotfiles
 
-git clone https://github.com/sundowndev/dotfiles $BASE
+if [ ! -d "$BASE" ]; then
+    git clone https://github.com/sundowndev/dotfiles $BASE
+fi
 
 # links
 ln -fs ${BASE}/bashrc ${HOME}/.bashrc
@@ -12,7 +14,7 @@ ln -fs ${BASE}/zshrc ${HOME}/.zshrc
 ln -fs ${BASE}/gitignore ${HOME}/.gitignore
 
 # mac
-if [ [ -z "$(which brew)" ] ]; then
+if [ -z "$(which brew)" ]; then
     echo "detected mac os"
     #brew install git vim wget fzf tree tmux graphviz transmission bash-completion reattach-to-user-namespace
     #brew cask install virtualbox virtualbox-extension-pack vagrant flux spectacle iterm2
