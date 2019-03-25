@@ -1,45 +1,42 @@
 #!/bin/bash
-# author: zach rice (https://github.com/zricethezav)
+
+BASE=$HOME/.dotfiles
+
+git clone https://github.com/sundowndev/dotfiles $BASE
 
 # links
-BASE=$(pwd)
-mkdir ${HOME}/.marks
 ln -fs ${BASE}/bashrc ${HOME}/.bashrc
 ln -fs ${BASE}/bash_profile ${HOME}/.bash_profile
 ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
-ln -fs ${BASE}/tmux.conf ${HOME}/.tmux.conf
+ln -fs ${BASE}/zshrc ${HOME}/.zshrc
+ln -fs ${BASE}/gitignore ${HOME}/.gitignore
 
 # mac
-if [ "$(uname -s)" = 'Darwin' ]; then
-    [ -z "$(which brew)" ] &&
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-    brew install git vim wget fzf tree tmux graphviz transmission bash-completion reattach-to-user-namespace
-    brew cask install virtualbox virtualbox-extension-pack vagrant flux spectacle iterm2
+if [ [ -z "$(which brew)" ] ]; then
+    echo "detected mac os"
+    #brew install git vim wget fzf tree tmux graphviz transmission bash-completion reattach-to-user-namespace
+    #brew cask install virtualbox virtualbox-extension-pack vagrant flux spectacle iterm2
     # [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] || \
     #     wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -P \
     #     /usr/local/etc/bash_completion.d/
 else
 # linux
-    sudo apt install -y git vim tmux wget transmission virtualbox virtualbox-ext-pack
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    sudo -y ~/.fzf/install
+    echo "detected linux os"
+    #sudo apt install -y git vim tmux wget transmission virtualbox virtualbox-ext-pack
+    #git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    #sudo -y ~/.fzf/install
     # [ -f /etc/bash_completion.d/git-completion.bash ] || \
     #     sudo wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -P \
     #     /etc/bash_completion.d/
 fi
 
-git config --global user.email "zricer@protonmail.com"
-git config --global user.name "zach rice"
-
-# tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-tmux source-file ~/.tmux.conf
+git config --global user.email "raphael@crvx.fr"
+git config --global user.name "sundowndev"
 
 # vim
-mkdir -p ~/.vim/autoload
-curl --insecure -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
-mv -v ~/.vimrc ~/.vimrc.old 2> /dev/null
-ln -sf $BASE/vimrc ~/.vimrc
+#mkdir -p ~/.vim/autoload
+#curl --insecure -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
+#mv -v ~/.vimrc ~/.vimrc.old 2> /dev/null
+#ln -sf $BASE/vimrc ~/.vimrc
 
-vim +PlugInstall +qall
+#vim +PlugInstall +qall
