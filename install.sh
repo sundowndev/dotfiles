@@ -4,6 +4,8 @@ BASE=$HOME/.dotfiles
 
 if [ ! -d "$BASE" ]; then
     git clone https://github.com/sundowndev/dotfiles $BASE
+else
+    echo "dotfiles already installed"
 fi
 
 # links
