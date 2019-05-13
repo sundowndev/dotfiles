@@ -1,11 +1,17 @@
 #!/bin/bash
 
+echo "==> running dotfiles install script"
+
 BASE=$HOME/.dotfiles
 
 if [ ! -d "$BASE" ]; then
+    echo "==> cloning git repository"
     git clone git@github.com:sundowndev/dotfiles.git $BASE
 else
-    echo "dotfiles already installed"
+    echo "==> dotfiles already installed"
+    echo "==> running git pull"
+    cd $BASE
+    git pull
 fi
 
 # links
@@ -26,3 +32,5 @@ git config --global user.name "sundowndev"
 #ln -sf $BASE/vimrc ~/.vimrc
 
 #vim +PlugInstall +qall
+
+echo "==> script executed"
