@@ -14,6 +14,7 @@ ln -fs ${BASE}/bash_profile ${HOME}/.bash_profile
 ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
 ln -fs ${BASE}/zshrc ${HOME}/.zshrc
 ln -fs ${BASE}/gitignore ${HOME}/.gitignore
+ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
 
 git config --global user.email "raphael@crvx.fr"
 git config --global user.name "sundowndev"
