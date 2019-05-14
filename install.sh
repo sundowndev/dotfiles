@@ -9,9 +9,9 @@ if [ ! -d "$BASE" ]; then
     git clone git@github.com:sundowndev/dotfiles.git $BASE
 else
     echo "==> dotfiles already installed"
-    echo "==> running git pull"
+    echo "==> running git pull origin master"
     cd $BASE
-    git pull
+    git pull origin master
 fi
 
 # links
@@ -20,7 +20,14 @@ ln -fs ${BASE}/bash_profile ${HOME}/.bash_profile
 ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
 ln -fs ${BASE}/zshrc ${HOME}/.zshrc
 ln -fs ${BASE}/gitignore ${HOME}/.gitignore
-ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
+
+if [ ! -f "${HOME}/.hyper.js" ]; then
+    ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
+fi
+
+if [ ! -f "${HOME}/.config/Code/User/settings.json" ]; then
+    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
+fi
 
 git config --global user.email "raphael@crvx.fr"
 git config --global user.name "sundowndev"
