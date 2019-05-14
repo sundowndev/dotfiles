@@ -1,0 +1,34 @@
+{
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "python.jediEnabled": false,
+  "editor.trimAutoWhitespace": false,
+  "editor.tabSize": 2,
+  "tslint.configFile": "tslint.json",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "prettier.trailingComma": "all",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  "editor.fontFamily": "'Hack', monospace",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "prettier.arrowParens": "always",
+  "workbench.statusBar.feedback.visible": false
+}
