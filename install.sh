@@ -21,11 +21,11 @@ ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
 ln -fs ${BASE}/zshrc ${HOME}/.zshrc
 ln -fs ${BASE}/gitignore ${HOME}/.gitignore
 
-if [ ! -f "${HOME}/.hyper.js" ]; then
+if [ -f "${HOME}/.hyper.js" ]; then
     ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
 fi
 
-if [ ! -f "${HOME}/.config/Code/User/settings.json" ]; then
+if [ -f "${HOME}/.config/Code/User/settings.json" ]; then
     ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
 fi
 
