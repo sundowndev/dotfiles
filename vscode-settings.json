@@ -2,7 +2,6 @@
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Darker High Contrast",
   "python.jediEnabled": false,
-  "editor.trimAutoWhitespace": false,
   "editor.tabSize": 2,
   // "tslint.configFile": "tslint.json",
   "[typescript]": {
@@ -14,7 +13,6 @@
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur",
   },
-  "prettier.trailingComma": "all",
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
   "[javascript]": {
@@ -38,11 +36,12 @@
   "vetur.format.defaultFormatter.scss": "prettier",
   "vetur.format.defaultFormatter.less": "prettier",
   "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-  "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
   "vetur.format.options.tabSize": 2,
   "vetur.format.options.useTabs": false,
   "eslint.enable": true,
   "eslint.run": "onType",
-  "files.autoSave": "onWindowChange"
+  "files.autoSave": "onWindowChange",
+  "prettier.eslintIntegration": true,
+  "prettier.trailingComma": "es5"
 }
