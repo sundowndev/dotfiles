@@ -4,7 +4,7 @@
   "python.jediEnabled": false,
   "editor.trimAutoWhitespace": false,
   "editor.tabSize": 2,
-  "tslint.configFile": "tslint.json",
+  // "tslint.configFile": "tslint.json",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -24,11 +24,19 @@
   "prettier.singleQuote": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.associations": {
-    "*.vue": "vue"
+    "*.vue": "html"
   },
   "editor.fontFamily": "'Hack', monospace",
   "terminal.integrated.fontFamily": "monospace",
   "editor.multiCursorModifier": "ctrlCmd",
   "prettier.arrowParens": "always",
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier"
 }
