@@ -105,6 +105,22 @@ source $ZSH/oh-my-zsh.sh
 
 alias code='vscodium'
 alias python='/usr/bin/python3'
+alias restart='sudo reboot'
+alias shutdown='sudo halt'
+alias apt-get='sudo apt-get'
+#alias fuck='sudo'
+#alias root='sudo su -'
+#alias sp='source ~/.bash_profile'
+#alias nerd='vim +NERDTree'
+#alias cpdir='cp -a'
+alias ll='ls -lv --group-directories-first'
+alias mkdir='mkdir -p'
+#alias ds='dirs -v'
+#alias df='df -kTh'
+#alias gitags='ctags -R -f ./.git/tags .'
+#alias bn='git checkout -B'
+#alias b='git branch'
+#alias gc='git checkout'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
