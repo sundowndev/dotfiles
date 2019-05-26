@@ -25,8 +25,8 @@ if [ -f "${HOME}/.hyper.js" ]; then
     ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
 fi
 
-if [ -f "${HOME}/.config/Code/User/settings.json" ]; then
-    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
+if [ -d "${HOME}/.config/VSCodium/User" ]; then
+    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
 fi
 
 git config --global user.email "raphael@crvx.fr"
