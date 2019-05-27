@@ -3,7 +3,6 @@
   "workbench.colorTheme": "Material Theme Darker High Contrast",
   "python.jediEnabled": false,
   "editor.tabSize": 2,
-  // "tslint.configFile": "tslint.json",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
