@@ -14,7 +14,7 @@ else
     git pull origin master
 fi
 
-# links
+# shell related dotfiles
 ln -fs ${BASE}/bashrc ${HOME}/.bashrc
 ln -fs ${BASE}/bash_profile ${HOME}/.bash_profile
 ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
@@ -25,10 +25,14 @@ if [ -f "${HOME}/.hyper.js" ]; then
     ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
 fi
 
-if [ -d "${HOME}/.config/VSCodium/User" ]; then
+# VSCode or VSCodium
+if [ -d "${HOME}/.config/Code/User" ]; then
+    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
+elif [ -d "${HOME}/.config/VSCodium/User" ]; then
     ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
 fi
 
+# Git user config
 git config --global user.email "raphael@crvx.fr"
 git config --global user.name "sundowndev"
 
@@ -37,7 +41,6 @@ git config --global user.name "sundowndev"
 #curl --insecure -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
 #mv -v ~/.vimrc ~/.vimrc.old 2> /dev/null
 #ln -sf $BASE/vimrc ~/.vimrc
-
 #vim +PlugInstall +qall
 
 echo "==> script executed"
