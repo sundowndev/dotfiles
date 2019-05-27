@@ -21,7 +21,7 @@
   "prettier.singleQuote": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.associations": {
-    "*.vue": "html"
+    "*.vue": "vue"
   },
   "editor.fontFamily": "'Hack', monospace",
   "terminal.integrated.fontFamily": "monospace",
@@ -42,5 +42,6 @@
   "eslint.run": "onType",
   "files.autoSave": "onWindowChange",
   "prettier.eslintIntegration": true,
-  "prettier.trailingComma": "es5"
+  "prettier.trailingComma": "es5",
+  "prettier.tslintIntegration": true
 }
