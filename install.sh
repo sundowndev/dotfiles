@@ -21,14 +21,16 @@ ln -fs ${BASE}/bash_aliases ${HOME}/.bash_aliases
 ln -fs ${BASE}/zshrc ${HOME}/.zshrc
 ln -fs ${BASE}/gitignore ${HOME}/.gitignore
 
-if [ -f "${HOME}/.hyper.js" ]; then
-    ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
-fi
+# if [ -f "${HOME}/.hyper.js" ]; then
+#     ln -fs ${BASE}/hyper.js ${HOME}/.hyper.js
+# fi
 
 # VSCode or VSCodium
 if [ -d "${HOME}/.config/Code/User" ]; then
     ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
 elif [ -d "${HOME}/.config/VSCodium/User" ]; then
+    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
+elif [ -d "${HOME}/.config/Codium/User" ]; then
     ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
 fi
 

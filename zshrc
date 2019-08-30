@@ -103,18 +103,18 @@ source $ZSH/oh-my-zsh.sh
 #autoload -U promptinit; promptinit
 #prompt pure
 
-alias code='vscodium'
+alias code='codium'
 alias python='/usr/bin/python3'
 alias restart='sudo reboot'
 alias shutdown='sudo halt'
 alias apt-get='sudo apt-get'
+alias ll='ls -lv --group-directories-first'
+alias mkdir='mkdir -p'
 #alias fuck='sudo'
 #alias root='sudo su -'
 #alias sp='source ~/.bash_profile'
 #alias nerd='vim +NERDTree'
 #alias cpdir='cp -a'
-alias ll='ls -lv --group-directories-first'
-alias mkdir='mkdir -p'
 #alias ds='dirs -v'
 #alias df='df -kTh'
 #alias gitags='ctags -R -f ./.git/tags .'
