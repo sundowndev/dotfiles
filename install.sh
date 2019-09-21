@@ -38,6 +38,11 @@ fi
 git config --global user.email "raphael@crvx.fr"
 git config --global user.name "sundowndev"
 
+# If npm is installed, disable scripts at package installation
+if type -p "npm" > /dev/null; then
+    npm config set ignore-scripts true
+fi
+
 # vim
 #mkdir -p ~/.vim/autoload
 #curl --insecure -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
