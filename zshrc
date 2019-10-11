@@ -11,6 +11,8 @@
 #ZSH_THEME="michelebologna"
 #ZSH_THEME="murilasso"
 ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
