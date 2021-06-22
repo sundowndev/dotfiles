@@ -105,25 +105,23 @@ source $ZSH/oh-my-zsh.sh
 #autoload -U promptinit; promptinit
 #prompt pure
 
-alias code='codium'
 alias python='/usr/bin/python3'
 alias restart='sudo reboot'
 alias shutdown='sudo halt'
 alias apt-get='sudo apt-get'
 alias ll='ls -lv --group-directories-first'
 alias mkdir='mkdir -p'
-#alias fuck='sudo'
-#alias root='sudo su -'
-#alias sp='source ~/.bash_profile'
-#alias nerd='vim +NERDTree'
-#alias cpdir='cp -a'
-#alias ds='dirs -v'
-#alias df='df -kTh'
-#alias gitags='ctags -R -f ./.git/tags .'
-#alias bn='git checkout -B'
-#alias b='git branch'
-#alias gc='git checkout'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# add Go bins to the PATH
+export PATH=$PATH:$HOME/go/bin
+
+export PATH="$HOME/.dctlenv/bin:$PATH"
+
+export DCTL_NO_VERSION_CHECK=false
+export DCTL_DISABLE_TELEMETRY=true
+export AWS_PROFILE=driftctlrole
+export PATH="$HOME/.tfenv/bin:$PATH"

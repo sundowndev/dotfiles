@@ -26,13 +26,13 @@ ln -fs ${BASE}/gitignore ${HOME}/.gitignore
 # fi
 
 # VSCode or VSCodium
-if [ -d "${HOME}/.config/Code/User" ]; then
-    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
-elif [ -d "${HOME}/.config/VSCodium/User" ]; then
-    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
-elif [ -d "${HOME}/.config/Codium/User" ]; then
-    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
-fi
+#if [ -d "${HOME}/.config/Code/User" ]; then
+#    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/Code/User/settings.json
+#elif [ -d "${HOME}/.config/VSCodium/User" ]; then
+#    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
+#elif [ -d "${HOME}/.config/Codium/User" ]; then
+#    ln -fs ${BASE}/vscode-settings.json ${HOME}/.config/VSCodium/User/settings.json
+#fi
 
 # Git user config
 git config --global user.email "raphael@crvx.fr"
